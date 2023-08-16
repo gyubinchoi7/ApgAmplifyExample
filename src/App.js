@@ -40,7 +40,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <main className="App">
       <button onClick={onSignOut}>Sign Out</button>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -56,7 +56,7 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+    </main>
   );
 }
 
