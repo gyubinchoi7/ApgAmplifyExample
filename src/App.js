@@ -11,8 +11,8 @@ const amplifyConfiguration = {
     oauth: {
       domain: "apgexample.auth.us-east-1.amazoncognito.com",
       scope: ["email", "profile", "openid", "phone"],
-      redirectSignIn: "https://main.d2ygm6ezozgaf9.amplifyapp.com/",
-      redirectSignOut: "https://main.d2ygm6ezozgaf9.amplifyapp.com/",
+      redirectSignIn: "https://main.d3bhb28fni1uk6.amplifyapp.com/",
+      redirectSignOut: "https://main.d3bhb28fni1uk6.amplifyapp.com/",
       clientId: "54vqq0s0j59hopl3d160cnpq7r",
       responseType: "code",
     },
