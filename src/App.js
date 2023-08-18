@@ -10,7 +10,13 @@ const amplifyConfiguration = {
     userPoolWebClientId: "54vqq0s0j59hopl3d160cnpq7r",
     oauth: {
       domain: "apgexample.auth.us-east-1.amazoncognito.com",
-      scope: ["email", "profile", "openid", "phone"],
+      scope: [
+        "email",
+        "openid",
+        "profile",
+        "phone",
+        "aws.cognito.signin.user.admin",
+      ],
       redirectSignIn: "https://main.d3bhb28fni1uk6.amplifyapp.com/",
       redirectSignOut: "https://main.d3bhb28fni1uk6.amplifyapp.com/",
       clientId: "54vqq0s0j59hopl3d160cnpq7r",
@@ -40,17 +46,7 @@ function App() {
     <main className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>Hello, World!</p>
       </header>
     </main>
   );
