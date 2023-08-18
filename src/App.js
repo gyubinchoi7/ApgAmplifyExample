@@ -3,6 +3,8 @@ import { Auth, Amplify } from "aws-amplify";
 import { useEffect } from "react";
 import "./App.css";
 
+const API_NAME_BACKEND_REST_API = "MyBackendAPI";
+
 const amplifyConfiguration = {
   Auth: {
     region: "us-east-1",
@@ -22,6 +24,22 @@ const amplifyConfiguration = {
       clientId: "54vqq0s0j59hopl3d160cnpq7r",
       responseType: "code",
     },
+  },
+  API: {
+    endpoints: [
+      {
+        name: API_NAME_BACKEND_REST_API,
+        endpoint: "https://74f1eu2k77.execute-api.us-east-1.amazonaws.com/dev",
+        custom_header: async () => {
+          return {
+            Authorization: `Bearer ${(await Auth.currentSession())
+              .getIdToken()
+              .getJwtToken()}`,
+            "Content-Type": "application/json",
+          };
+        },
+      },
+    ],
   },
 };
 
