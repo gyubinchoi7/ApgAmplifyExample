@@ -35,13 +35,9 @@ function App() {
   useEffect(() => {
     checkLogin();
   });
-  const onSignOut = () => {
-    Auth.signOut();
-  };
 
   return (
     <main className="App">
-      <button onClick={onSignOut}>Sign Out</button>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
